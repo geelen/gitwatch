@@ -10,4 +10,6 @@ class GitwatchProject(info: ProjectInfo) extends DefaultWebProject(info) {
   val jgit = "org.spearce" % "jgit" % "0.5.0"
 
   val scapps = "scapps" % "scapps" % "0.1"
+
+  val scalaz = "scalaz" % "scalaz" % "4.0-p2"
 }
