@@ -1,3 +1,5 @@
+package org.prohax.gitwatch
+
 import collection.mutable.ArrayBuffer
 
 class HeightMap {

@@ -1,3 +1,5 @@
+package org.prohax.gitwatch
+
 import org.specs._
 
 object HeightMapSpec extends Specification {

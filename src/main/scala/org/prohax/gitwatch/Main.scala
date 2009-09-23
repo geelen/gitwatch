@@ -1,4 +1,4 @@
-package org.prohax
+package org.prohax.gitwatch
 
 object Main {
   def main(args: Array[String]) {
