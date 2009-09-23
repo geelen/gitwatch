@@ -10,6 +10,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/scala" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.git" />
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/lib_managed" />
       <excludeFolder url="file://$MODULE_DIR$/project/boot/scala-2.7.5" />
@@ -19,6 +20,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="scala" level="application" />
     <orderEntry type="library" name="sbt" level="project" />
+    <orderEntry type="library" name="libs" level="project" />
   </component>
 </module>
 
