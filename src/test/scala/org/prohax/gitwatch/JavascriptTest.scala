@@ -11,8 +11,8 @@ object JavascriptTest extends Specification {
       js.test("1234") must beEqualTo("1234")
       js.test("") must beEqualTo("")
     }
-//    "add values" in {
-//      js.add(1,2) must beEqualTo(3.0)
-//    }
+    "add values" in {
+      js.add(1.0,2.0) must beEqualTo(3.0)
+    }
   }
 }

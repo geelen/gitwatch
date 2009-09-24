@@ -2,6 +2,7 @@ package org.prohax.gitwatch
 
 import scala.io.Source
 import com.sun.script.javascript.RhinoScriptEngine
+import runtime.RichDouble
 
 class JavascriptFile(file: String) {
   val engine = {
@@ -11,5 +12,6 @@ class JavascriptFile(file: String) {
   }
 
   def test(a: String) = engine.invokeFunction("test", a)
-  def add(a: Double, b: Double) = engine.invokeFunction("add", a.toString, b.toString)
+  //using invokefunction returns a string concat of a&b...
+  def add(a: RichDouble, b: RichDouble) = engine.eval("add(" + a + "," + b + ")")
 }
