@@ -12,5 +12,7 @@ class JavascriptFile(file: String) {
   }
 
   def test(a: String) = engine.invokeFunction("test", a)
-  def add(a: Double, b: Double) = engine.invokeFunction("add", new JDouble(a), new JDouble(b))
+  val List(add,multiply) = List("add","multiply").map((name) => {
+    (a: Double, b: Double) => engine.invokeFunction(name, new JDouble(a), new JDouble(b))
+  })
 }

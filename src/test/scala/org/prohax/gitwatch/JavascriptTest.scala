@@ -16,5 +16,10 @@ object JavascriptTest extends Specification {
       js.add(5,10) must beEqualTo(15.0)
       js.add(5.0,-10.0) must beEqualTo(-5.0)
     }
+    "multiply values" in {
+      js.multiply(1.0,2.0) must beEqualTo(2.0)
+      js.multiply(5,10) must beEqualTo(50.0)
+      js.multiply(5.0,-10.0) must beEqualTo(-50.0)
+    }
   }
 }
