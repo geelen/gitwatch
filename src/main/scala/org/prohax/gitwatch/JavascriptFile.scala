@@ -11,7 +11,7 @@ class JavascriptFile(file: String) {
     e
   }
 
-  def length(a: List[Any]) = engine.invokeFunction("length", new java.util.ArrayList)
+  def length(a: List[Any]) = engine.invokeFunction("length", a)
 
   def test(a: String) = engine.invokeFunction("test", a)
 
