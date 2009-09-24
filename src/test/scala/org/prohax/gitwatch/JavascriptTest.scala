@@ -12,8 +12,9 @@ object JavascriptTest extends Specification {
       js.test("") must beEqualTo("")
     }
     "add values" in {
-      js.engine.invokeFunction("add", new java.lang.Double(1), new java.lang.Double(2)) must beEqualTo(3.0)
       js.add(1.0,2.0) must beEqualTo(3.0)
+      js.add(5.0,10.0) must beEqualTo(15.0)
+      js.add(5.0,-10.0) must beEqualTo(-5.0)
     }
   }
 }
