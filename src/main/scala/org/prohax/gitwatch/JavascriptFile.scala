@@ -12,5 +12,5 @@ class JavascriptFile(file: String) {
   }
 
   def test(a: String) = engine.invokeFunction("test", a)
-  def add(a: JDouble, b: JDouble) = engine.invokeFunction("add", a, b)
+  def add(a: Double, b: Double) = engine.invokeFunction("add", new JDouble(a), new JDouble(b))
 }

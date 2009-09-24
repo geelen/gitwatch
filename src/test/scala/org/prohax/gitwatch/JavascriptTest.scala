@@ -13,7 +13,7 @@ object JavascriptTest extends Specification {
     }
     "add values" in {
       js.add(1.0,2.0) must beEqualTo(3.0)
-      js.add(5.0,10.0) must beEqualTo(15.0)
+      js.add(5,10) must beEqualTo(15.0)
       js.add(5.0,-10.0) must beEqualTo(-5.0)
     }
   }
