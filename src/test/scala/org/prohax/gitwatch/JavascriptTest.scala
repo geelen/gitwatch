@@ -26,6 +26,7 @@ object JavascriptTest extends Specification {
   "advanced tester" should {
     "get length" in {
       js.length(List()) must beEqualTo(0)
+      js.length(List(1,2,3)) must beEqualTo(3)
     }
   }
 }
