@@ -1,5 +1,5 @@
-var draw = function(list) {
-    return list + list
+var length = function(list) {
+    return list.size()
 }
 
 var test = function(list) {

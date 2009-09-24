@@ -11,8 +11,11 @@ class JavascriptFile(file: String) {
     e
   }
 
+  def length(a: List[Any]) = engine.invokeFunction("length", new java.util.ArrayList)
+
   def test(a: String) = engine.invokeFunction("test", a)
-  val List(add,multiply) = List("add","multiply").map((name) => {
+
+  val List(add, multiply) = List("add", "multiply").map((name) => {
     (a: Double, b: Double) => engine.invokeFunction(name, new JDouble(a), new JDouble(b))
   })
 }

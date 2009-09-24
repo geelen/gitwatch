@@ -22,4 +22,10 @@ object JavascriptTest extends Specification {
       js.multiply(5.0,-10.0) must beEqualTo(-50.0)
     }
   }
+
+  "advanced tester" should {
+    "get length" in {
+      js.length(List()) must beEqualTo(0)
+    }
+  }
 }
