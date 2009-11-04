@@ -24,20 +24,18 @@ class HeightMap {
       val min = Iterable.min(state.map(_._2.start))
       val max = Iterable.max(state.map(_._2.end))
       val maxHeight = Iterable.max(state.map(_._1))
-      val lines = new ArrayBuffer[String]
-      lines += "min: " + min + ", max: " + max + ", height: " + maxHeight
-      Stream range (maxHeight, -1, -1) foreach ((i) => {
+      val header = "min: " + min + ", max: " + max + ", height: " + maxHeight
+      (header :: Stream.range(maxHeight, -1, -1).map((i) => {
         val line = Array.make(101, ' ')
         state.filter(_._1 == i).foreach((x) => {
           val l = (100 * (x._2.start - min).toDouble / (max - min)).round.toInt
           val r = (100 * (x._2.end - min).toDouble / (max - min)).round.toInt
-          l until r + 1 foreach (x => {
+          l.until(r + 1).foreach (x => {
             line.update(x, '-')
           })
         })
-        lines += line.mkString
-      })
-      lines mkString "\n"
+        line
+      }).toList) mkString "\n"
     }
   }
 }
